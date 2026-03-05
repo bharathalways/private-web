@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Beautiful Surprise</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <div class="hearts-container"></div>
+
+<button id="musicToggle" class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<!-- INTRO -->
+<div class="intro">
+    <div class="intro-card">
+        <h1 class="main-title">A Little Secret For Someone Special 💗</h1>
+        <p class="subtitle">Only hearts that know the code may enter.</p>
+
+        <input type="password" id="passwordInput" placeholder="Enter the secret code">
+        <button class="primary-btn" onclick="checkPassword()">
+            Unlock The Surprise ✨
+        </button>
+
+        <p id="errorMsg"></p>
+    </div>
+</div>
+
+<!-- MAIN -->
+<div class="main hidden">
+
+    <section class="hero">
+        <h1 id="typing"></h1>
+    </section>
+
+    <!-- SLIDER -->
+
+    <section class="photo-section">
+
+    <div class="photo-grid">
+
+        <!-- 1 -->
+        <div class="photo-box">
+            <img src="assets/0.jpeg" class="real-img" alt="Memory 1">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                You didn’t enter my life… you became its most beautiful part.
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="photo-box">
+            <img src="assets/1.jpeg" class="real-img" alt="Memory 2">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                Every time I see you, I fall in love all over again.
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="photo-box">
+            <img src="assets/2.jpeg" class="real-img" alt="Memory 3">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                In your smile, I see my forever.
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="photo-box">
+            <img src="assets/3.jpeg" class="real-img" alt="Memory 4">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                With you, ordinary moments become magical.
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="photo-box">
+            <img src="assets/4.jpeg" class="real-img" alt="Memory 5">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                You are my calm in every storm.
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="photo-box">
+            <img src="assets/5.jpeg" class="real-img" alt="Memory 6">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                Even forever feels too short with you.
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="photo-box">
+            <img src="assets/6.jpeg" class="real-img" alt="Memory 7">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                My heart chose you without hesitation.
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="photo-box">
+            <img src="assets/7.jpeg" class="real-img" alt="Memory 8">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                You are the dream I never want to wake from.
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="photo-box">
+            <img src="assets/8.jpeg" class="real-img" alt="Memory 9">
+            <img src="assets/teddy.jpeg" class="teddy-img" alt="Teddy">
+            <div class="center-quote">
+                No matter what happens, my love will always choose you.
+            </div>
+        </div>
+
+    </div>
+
+</section>
+    <!-- QUESTION -->
+    <section class="love-question">
+        <h2>Do you know how deeply I adore you? 💖✨</h2>
+        <div class="btn-group">
+            <button class="primary-btn" onclick="goToLetter()">Yes 💖</button>
+            <button class="secondary-btn" onclick="goToLetter()">No 💔</button>
+        </div>
+    </section>
+
+</div>
+
+<!-- LETTER -->
+<div class="love-letter hidden" id="letterPage">
+    <div class="letter-card">
+        <h1>My Heart Speaks To You 💌</h1>
+        <p>
+        <div class="love-story">
+
+<p class="story-line">How can I even begin to tell you how much you mean to me? Sometimes I sit quietly and wonder… do you truly know how deeply I love you? How much I admire you, respect you, and cherish every little part of what we share? ❤️</p>
+<p class="story-line">When I look back at everything, it still amazes me how our story even began. After finishing school, during a simple family gathering at a wedding, life quietly introduced me to you. In the middle of all the celebrations, conversations, and laughter, there you were. I did not know then that the girl I casually spoke to that day would slowly become the most important person in my life. ✨</p>
+<p class="story-line">You were a little more mature, a little more experienced, and I still remember how easy it felt talking to you. That small conversation somehow turned into exchanging numbers. At that moment, it felt like nothing special—just two people staying in touch. But little did I know that those simple messages would slowly turn into hours of conversations, late-night talks, and moments that would mean so much to me. 📱</p>
+<p class="story-line">For almost a year, we were just friends. But even then, something about you felt different. Talking to you made my days lighter, and slowly, without even realizing it, my heart had already chosen you.</p>
+<p class="story-line">Then came the night I will never forget.</p>
+<p class="story-line">June 28th. 3:00 in the morning. 🌙</p>
+<p class="story-line">The whole world was asleep, but my heart was wide awake. I remember gathering all my courage and finally asking you the question that had been living inside my heart for so long. And when you said yes, it felt like time paused for a moment. That was the moment when everything changed, when friendship quietly turned into something beautiful—love. 💞</p>
+<p class="story-line">Since that night, three incredible years have passed. Even though we are walking different academic paths—me continuing my BTech journey and you pursuing your own path—we never let distance or busy days weaken what we built together. 🎓</p>
+<p class="story-line">Our story is not about grand gestures or dramatic moments. It is about the small things: the late-night talks about our future, the encouragement we give each other during difficult days, the silly jokes only we understand, and the comfort of knowing that no matter how chaotic life becomes, we still have each other. 🤍</p>
+<p class="story-line">And honestly, sometimes I still ask myself—how did I get so lucky to have someone like you?</p>
+<p class="story-line">You are not just someone I love. You are someone I deeply admire. Someone who inspires me to grow, to work harder, and to become a better person every single day. 🌱</p>
+<p class="story-line">Four years have passed since that first meeting, and yet my feelings for you only continue to grow stronger. Every memory we created, every challenge we overcame, and every dream we shared has made our bond even more meaningful.</p>
+<p class="story-line">I may not always find the perfect words to express everything I feel. But if there is one thing I hope you always know, it is this:</p>
+<p class="story-line">I love you more than simple words can ever explain. ❤️ I admire the person you are. And I truly believe that our journey is only beginning.</p>
+<p class="story-line">No matter where life takes us, no matter how many years pass, I hope we continue writing this beautiful story together—one memory, one dream, and one moment at a time. ✨</p>
+<p class="story-line">Because loving you has never been just a part of my life… it has become one of the most beautiful things in it. 💖</p>
+
+</div>
+
+        </p>
+
+        <button class="primary-btn" onclick="showFeedback()">
+            Leave Your Sweet Words 💗
+        </button>
+    </div>
+</div>
+
+<!-- FEEDBACK -->
+<section class="feedback hidden" id="feedbackSection">
+    <div class="feedback-card">
+        <h2>Write Something From Your Heart 💕</h2>
+        <textarea id="userMessage" placeholder="Your message means everything..."></textarea>
+        <button class="primary-btn" onclick="saveMessage()">Send 💌</button>
+        
+        <div id="messages"></div>
+    </div>
+</section>
+
+
+<section class="photo-section reveal">
+<section class="love-question reveal">
+<div class="love-letter reveal">
+<section class="feedback reveal">
+<div class="thankyou reveal">
+
+  
+<!-- THANK YOU -->
+<div class="thankyou hidden" id="thankYouSection">
+    <div class="thankyou-card">
+        <h2>Thank You For Being Here 💗</h2>
+        <p id="privateMessage">
+            No matter where life takes us,
+            this little website will always remind you
+            how deeply you are loved.
+        </p>
+    </div>
+</div>
+<div class="image-modal" id="imageModal">
+    <span onclick="closeModal()" class="close-btn">&times;</span>
+    <img id="modalImg">
+</div>
+
+<audio id="music" src="assets/music.mp3" loop></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

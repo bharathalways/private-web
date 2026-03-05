@@ -1,0 +1,606 @@
+/* ===================== GLOBAL ===================== */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#ffd6e7,#ffeaf4);
+    color: #6b003f;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===================== INTRO ===================== */
+
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-card {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(255,105,180,0.3);
+    text-align: center;
+    width: 350px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #ff80b3;
+    margin-top: 15px;
+    outline: none;
+}
+
+.primary-btn, .secondary-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: linear-gradient(45deg,#ff4da6,#ff0066);
+    color: white;
+}
+
+.secondary-btn {
+    background: white;
+    border: 2px solid #ff4da6;
+    color: #ff0066;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    transform: scale(1.08);
+}
+
+/* ===================== HERO ===================== */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+}
+
+#typing {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+
+/* GIFT WRAPPER */
+
+.gift-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(255,105,180,0.3);
+}
+
+/* IMAGE */
+
+.gift-wrapper img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* TEXT */
+
+.open-text {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.4s ease;
+}
+
+/* HOVER EFFECT (TEASE PREVIEW) */
+
+
+
+
+.photo-box:hover .open-text {
+    opacity: 0;
+}
+
+/* QUOTE OVERLAY */
+
+.photo-quote {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,240,245,0.95);
+    color: #6b003f;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* FLOATING TEDDY */
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* ===================== MODAL ===================== */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.image-modal img {
+    width: 60%;
+    max-width: 700px;
+    border-radius: 20px;
+    animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* ===================== LOVE QUESTION ===================== */
+
+.love-question {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.love-question h2 {
+    font-size: 2.5rem;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* ===================== LETTER ===================== */
+
+.letter-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* ===================== FEEDBACK ===================== */
+
+.feedback-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    border: 2px solid #ff80b3;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* ===================== THANK YOU ===================== */
+
+.thankyou-card {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    width: 80%;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* ===================== MUSIC BUTTON ===================== */
+
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(45deg,#ff4da6,#ff0066);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* GIFT COVER */
+.gift-cover {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,#ffb6d9,#ff4da6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* IMPORTANT */
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.8s ease;
+    z-index: 5;
+}
+
+/* TEDDY TOP CENTER */
+.teddy-icon {
+    width: 90px;
+    margin-top: 30px;
+    transition: 0.4s ease;
+}
+
+/* QUOTE AT BOTTOM */
+.cover-quote {
+    width: 100%;
+    background: rgba(255, 240, 245, 0.95);
+    color: #6b003f;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: 0.4s ease;
+}
+
+/* HOVER TEASE */
+.photo-box:hover .teddy-icon {
+    transform: translateY(-15px);
+    opacity: 0.2;
+}
+
+.photo-box:hover .cover-quote {
+    transform: translateY(-5px);
+}
+
+/* CLICK OPEN */
+.photo-box.open .gift-cover {
+    transform: translateY(-100%);
+}
+
+/* nm */
+.photo-section {
+    padding: 40px 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.photo-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255,105,180,0.3);
+    transition: 0.3s ease;
+}
+
+.photo-box:hover {
+    transform: translateY(-8px);
+}
+
+/* Real image */
+
+.real-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Teddy layer */
+
+.teddy-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: linear-gradient(135deg,#ffb6d9,#ff4da6);
+    padding: 40px;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+/* Center Quote (Hidden by default) */
+
+.center-quote {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    background: rgba(0,0,0,0.35);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Hover → preview */
+
+
+
+.photo-box:hover .center-quote {
+    opacity: 1;
+}
+
+/* Click → permanent open */
+
+
+.photo-box.open .center-quote {
+    opacity: 0;
+}
+
+/* next level edit */
+
+/* ================= FLOATING HEARTS ================= */
+
+.hearts-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4da6;
+    transform: rotate(45deg);
+    animation: floatUp 10s linear infinite;
+    opacity: 0.15;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff4da6;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.15;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .real-img {
+        height: 250px;
+    }
+
+    .center-quote {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .letter-card,
+    .feedback-card,
+    .thankyou-card {
+        width: 95%;
+        margin: 40px auto;
+    }
+}
+
+/* ================= FINAL ENDING ================= */
+
+.final-ending {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.ending-content {
+    max-width: 600px;
+    margin: auto;
+    animation: fadeInSoft 2s ease;
+}
+
+.ending-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.ending-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@keyframes fadeInSoft {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.love-story{
+max-width:700px;
+margin:auto;
+font-size:18px;
+line-height:1.9;
+color:#6b003f;
+}
+
+.story-line{
+opacity:0;
+transform:translateY(30px);
+transition:all 1s ease;
+margin-bottom:30px;
+}
+
+.story-line.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.photo-box.open .teddy-img{
+opacity:0;
+pointer-events:none;
+}
+
+.photo-box:hover .teddy-img{
+opacity:0;
+}
+.photo-box{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+cursor:pointer;
+}
+
+.real-img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+}
+
+.teddy-img{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.6s;
+z-index:2;
+}
+
+.center-quote{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font-weight:600;
+font-size:16px;
+text-align:center;
+opacity:0;
+transition:0.5s;
+padding:20px;
+}
+
+/* hover preview */
+.photo-box:hover .teddy-img{
+opacity:0.2;
+}
+
+.photo-box:hover .center-quote{
+opacity:1;
+}
+
+/* click open */
+.photo-box.open .teddy-img{
+display:none;
+}
+
+.photo-box.open .center-quote{
+display:none;
+}
