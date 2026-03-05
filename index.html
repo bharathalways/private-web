@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- AOS Scroll Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<!-- PASSWORD INTRO -->
+<div class="intro">
+    <h1 class="glow">Private Surprise 🎁</h1>
+    <input type="password" id="password" placeholder="Enter Secret Code">
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error"></p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main hidden">
+
+    <section class="hero">
+        <h1 id="typing"></h1>
+        <h2 id="countdown"></h2>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="timeline">
+
+        <div class="memory" data-aos="fade-right">
+            <img src="assets/img1.jpg">
+            <p>The Day We Met ❤️</p>
+        </div>
+
+        <div class="memory" data-aos="fade-left">
+            <img src="assets/img2.jpg">
+            <p>Our Favorite Memory ✨</p>
+        </div>
+
+        <div class="memory" data-aos="fade-right">
+            <img src="assets/img3.jpg">
+            <p>Forever To Go 💫</p>
+        </div>
+
+    </section>
+
+    <!-- FEEDBACK -->
+    <section class="feedback">
+        <h2>Leave Your Message ❤️</h2>
+        <textarea id="userMessage" placeholder="Write something beautiful..."></textarea>
+        <button onclick="saveMessage()">Submit</button>
+        <div id="messages"></div>
+    </section>
+
+</div>
+
+<audio id="music" src="assets/music.mp3" loop></audio>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
