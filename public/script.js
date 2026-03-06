@@ -55,19 +55,6 @@ function showFeedback(){
     document.getElementById("feedbackSection").classList.remove("hidden");
 }
 
-// function saveMessage(){
-//     const message = document.getElementById("userMessage").value;
-//     if(message.trim()==="") return;
-
-//     const p = document.createElement("p");
-//     p.innerText = message;
-//     document.getElementById("messages").appendChild(p);
-//     document.getElementById("userMessage").value="";
-
-//     document.getElementById("feedbackSection").classList.add("hidden");
-//     document.getElementById("thankYouSection").classList.remove("hidden");
-// }
-
 
 async function saveMessage() {
 
