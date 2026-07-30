@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* INTRO */
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #1a001a, black);
+}
+
+.glow {
+    font-size: 3rem;
+    color: #ff4da6;
+    text-shadow: 0 0 20px #ff4da6;
+}
+
+input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    background: #ff4da6;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.timeline {
+    width: 80%;
+    margin: auto;
+}
+
+.memory {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.memory img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 77, 166, 0.4);
+}
+
+/* FEEDBACK */
+.feedback {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#messages p {
+    background: rgba(255, 77, 166, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+/* CURSOR GLOW */
+.cursor-glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #ff4da6;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: blur(10px);
+    z-index: 9999;
+}
