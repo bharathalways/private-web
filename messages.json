@@ -18,5 +18,20 @@
   {
     "text": "hi bharath",
     "date": "2026-03-06T15:34:04.793Z"
+<<<<<<< HEAD
+=======
+  },
+  {
+    "text": "hi",
+    "date": "2026-07-24T06:18:31.444Z"
+  },
+  {
+    "text": "very good",
+    "date": "2026-07-30T04:46:19.334Z"
+  },
+  {
+    "text": "I am Glad to hear this from, and Love you 2",
+    "date": "2026-07-30T04:48:11.270Z"
+>>>>>>> 45917a425532221a72da0849910608e73a3ad5d5
   }
 ]
