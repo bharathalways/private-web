@@ -182,11 +182,11 @@
 </section>
 
 
-<section class="photo-section reveal">
+<!-- <section class="photo-section reveal">
 <section class="love-question reveal">
 <div class="love-letter reveal">
 <section class="feedback reveal">
-<div class="thankyou reveal">
+<div class="thankyou reveal"> -->
 
   
 <!-- THANK YOU -->
@@ -201,8 +201,7 @@
     </div>
 </div>
 <div class="image-modal" id="imageModal">
-    <span onclick="closeModal()" class="close-btn">&times;</span>
-    <img id="modalImg">
+    <img id="modalImg" onclick="event.stopPropagation()">
 </div>
 
 <audio id="music" src="assets/music.mp3" loop></audio>
