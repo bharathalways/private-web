@@ -76,7 +76,7 @@ app.get("/get-messages", (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
-=======
+
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
